@@ -1,0 +1,42 @@
+# GO Feature Flag configuration file
+# This file defines feature flags for enabling/disabling features without code changes
+# Documentation: https://gofeatureflag.org/docs
+# Targeting rules format: https://gofeatureflag.org/docs/configure_flag/target-with-flags#nikunjyrules-format
+#
+# Each flag contains:
+# - variations: possible values the flag can return
+# - defaultRule: default variation when no targeting rules match
+# - targeting: rules for specific audiences or conditions
+
+allow_to_adjust_stt_piece_add:
+  variations:
+    enabled: true
+    disabled: false
+  defaultRule:
+    variation: disabled
+  targeting:
+    - query: 'bookingClientCode IN ["CL15207","CL13334"] and prefix IN ["99", "98", "95", "19", "C1", "C2"]'
+      variation: enabled
+
+allow_to_adjust_stt_piece_remove:
+  variations:
+    enabled: true
+    disabled: false
+  defaultRule:
+    variation: disabled
+  targeting:
+    - query: 'bookingClientCode IN ["CL15207","CL13334"] and prefix IN ["99", "98", "95", "19", "C1", "C2"]'
+      variation: disabled
+
+free_booking_return_date:
+  variations:
+    date: "2025-09-01"
+  defaultRule:
+    variation: date
+    
+free_booking_return:
+  variations:
+    enabled: true
+    disabled: false
+  defaultRule:
+    variation: enabled
