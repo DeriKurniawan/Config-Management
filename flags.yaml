@@ -110,7 +110,7 @@ deprecated_product_types:
 
 disable_booking_product_types_date:
   variations:
-    date: "2025-10-01"
+    date: "2025-09-01"
   defaultRule:
     variation: date
 
