@@ -120,6 +120,12 @@ disable_tariff_product_types_date:
   defaultRule:
     variation: date
 
+cargo_proof_edit_enable_date:
+  variations:
+    date: "2025-10-01 00:00:00"
+  defaultRule:
+    variation: date
+
 recall_zero_insurance_trial:
   variations:
     enabled: true
