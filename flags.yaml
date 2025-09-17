@@ -119,3 +119,16 @@ disable_tariff_product_types_date:
     date: "2025-09-22"
   defaultRule:
     variation: date
+
+recall_zero_insurance_trial:
+  variations:
+    enabled: true
+    disabled: false
+  defaultRule:
+    variation: enabled
+
+recall_zero_insurance_trial_count:
+  variations:
+    counter: 2
+  defaultRule:
+    variation: counter
